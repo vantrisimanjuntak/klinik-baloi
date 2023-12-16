@@ -35,8 +35,14 @@
 </head>
 
 <body>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('content'); ?>
+
+    <div class="hero_area">
+
+        <?php $this->load->view('header'); ?>
+
+    </div>
+    <!-- <?php $this->load->view('header'); ?> -->
+    <!-- <?php $this->load->view('content'); ?> -->
 
 
     <!-- footer -->
