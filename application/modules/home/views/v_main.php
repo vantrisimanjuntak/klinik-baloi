@@ -26,6 +26,7 @@
 
 <!-- font awesome style -->
 <link href="<?= base_url('assets/asset-home/carint-1.0.0/css/font-awesome.min.css'); ?>" rel="stylesheet" />
+<!-- <link href="<?= base_url('assets/fontawesome-free-6.5.1-web/css/fontawesome.min.css'); ?>" rel="stylesheet" /> -->
 
 <!-- Custom styles for this template -->
 <link href="<?= base_url('assets/asset-home/carint-1.0.0/css/style.css'); ?>" rel="stylesheet" />
