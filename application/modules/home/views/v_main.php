@@ -31,14 +31,16 @@
 <link href="<?= base_url('assets/asset-home/carint-1.0.0/css/style.css'); ?>" rel="stylesheet" />
 <!-- responsive style -->
 <link href="<?= base_url('assets/asset-home/carint-1.0.0/css/responsive.css'); ?>" rel="stylesheet" />
+<link href="<?= base_url('assets/tambahan.css'); ?>" rel="stylesheet" />
 
 </head>
 
-<body>
+<body style="background:#c5eef6;">
 
     <div class="hero_area">
 
         <?php $this->load->view('header'); ?>
+        <?php $this->load->view('main_content'); ?>
 
     </div>
     <!-- <?php $this->load->view('header'); ?> -->

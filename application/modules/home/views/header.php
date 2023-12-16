@@ -5,19 +5,13 @@
                 <a href="">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <span>
-                        Call : +01 123455678990
+                        Call : (62) 8628931
                     </span>
                 </a>
                 <a href="">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     <span>
-                        Email : demo@gmail.com
-                    </span>
-                </a>
-                <a href="">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <span>
-                        Location
+                        Email : ppid@batam.go.id
                     </span>
                 </a>
             </div>
@@ -42,14 +36,24 @@
                         <li class="nav-item">
                             <a class="nav-link" href="service.html">Profil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"> Informasi Publik</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="about.html"> Informasi Publik</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Link 1</a>
+                                <a class="dropdown-item" href="#">Link 2</a>
+                                <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html"> Info Layanan</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"> SOP Layanan Publik</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="about.html"> SOP Layanan Publik</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Link 1</a>
+                                <a class="dropdown-item" href="#">Link 2</a>
+                                <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html"> Video </a>
@@ -57,8 +61,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Galeri</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">JDIH</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="about.html"> JDIH</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Link 1</a>
+                                <a class="dropdown-item" href="#">Link 2</a>
+                                <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Satu Data</a>
