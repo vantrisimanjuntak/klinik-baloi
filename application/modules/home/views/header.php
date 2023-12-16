@@ -19,7 +19,7 @@
     </div>
     <div class="header_bottom">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-sm custom_nav-container" style="font-size: 13px;">
+            <nav class="navbar navbar-expand-xl custom_nav-container" style="font-size: 13px;">
                 <a class="navbar-brand" href="index.html">
                     <span>
                         <img src="<?= base_url('assets/images/logo-ppid.png') ?>" width="140px" alt="" srcset="">

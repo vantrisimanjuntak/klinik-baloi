@@ -41,10 +41,8 @@
 
         <?php $this->load->view('header'); ?>
         <?php $this->load->view('main_content'); ?>
-
     </div>
-    <!-- <?php $this->load->view('header'); ?> -->
-    <!-- <?php $this->load->view('content'); ?> -->
+
 
 
     <!-- footer -->

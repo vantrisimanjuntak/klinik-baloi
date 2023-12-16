@@ -1,6 +1,6 @@
 <div class="header_bottom">
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-sm custom_nav-container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="index.html">
                 <span>
                     <img src="<?= base_url('assets/images/logo-ppid.png') ?>" width="140px" alt="" srcset="">
@@ -15,7 +15,7 @@
                         <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service.html">Profil</a>
+                        <a class="nav-link" href="service.html">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html"> Informasi Publik</a>
