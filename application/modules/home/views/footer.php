@@ -55,17 +55,23 @@
                 <div class="col-lg-6 mt-3" style="list-style-type:none">
                     <h5 class="font-weight-bold">Situs Terkait</h5>
                     <p>
-                        <li><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                        <li><i class="fa fa-external-link" aria-hidden="true"></i>
+
                             Gift of BIFZA</li>
-                        <li class="mt-2"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                        <li class="mt-2"><i class="fa fa-external-link" aria-hidden="true"></i>
+
                             Batam Single Window</li>
-                        <li class="mt-2"> <i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                        <li class="mt-2"> <i class="fa fa-external-link" aria-hidden="true"></i>
+
                             Kalkulator UWT</li>
-                        <li class="mt-2"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                        <li class="mt-2"><i class="fa fa-external-link" aria-hidden="true"></i>
+
                             Sistem Perizinan Lalu Lintas Barang</li>
-                        <li class="mt-2"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                        <li class="mt-2"><i class="fa fa-external-link" aria-hidden="true"></i>
+
                             Sistem Pengadaan Secara Elektronik</li>
-                        <li class="mt-2"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                        <li class="mt-2"><i class="fa fa-external-link" aria-hidden="true"></i>
+
                             Layanan Data dan Informasi</li>
                     </p>
                 </div>
