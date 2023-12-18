@@ -2,8 +2,7 @@
     <div class="container-fluid no-padding px-0">
         <div class="row">
             <div class="col-md-12">
-                <!-- <img class='img-fluid w-100' src="<?= base_url('assets/images/hospital.jpg') ?>" alt="" srcset=""> -->
-                <h1 class="text-white font-weight-bold">Rumah Sakit BP Batam</h1>
+                <h1 class="text-danger font-weight-bold">Klinik Baloi Batam</h1>
             </div>
         </div>
     </div>
