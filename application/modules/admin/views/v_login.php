@@ -31,26 +31,19 @@
         <div class="login_wrapper">
             <div class="animate form login_form">
                 <section class="login_content">
-                    <form>
-                        <h1>Login Form</h1>
+                    <form action="<?= base_url('admin/login/checklogin') ?>" method="POST">
+                        <h1>Login <br> Sistem Informasi Data Pengunjung Pasien</h1>
                         <div>
-                            <input type="text" class="form-control" placeholder="Username" required="" />
+                            <input type="text" class="form-control" name="username" placeholder="Username" required="" />
                         </div>
                         <div>
-                            <input type="password" class="form-control" placeholder="Password" required="" />
+                            <input type="password" class="form-control" name="password" placeholder="Password" required="" />
                         </div>
                         <div>
-                            <a class="btn btn-default submit" href="index.html">Log in</a>
-                            <a class="reset_pass" href="#">Lost your password?</a>
+                            <button class="btn btn-warning" type="submit">Submit</button>
                         </div>
-
                         <div class="clearfix"></div>
-
                         <div class="separator">
-                            <p class="change_link">New to site?
-                                <a href="#signup" class="to_register"> Create Account </a>
-                            </p>
-
                             <div class="clearfix"></div>
                             <br />
 
