@@ -3,6 +3,7 @@
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Main_model');
     }
     function index()
     {
@@ -17,7 +18,13 @@
         if ($username == "" && $password == "") {
             echo "Username dan password Kosong";
         } else {
-            echo $username . " " . $password;
+            $checkDataLogin = $this->Main_model->login($username, $password); {
+                if ($checkDataLogin) {
+                    redirect('admin/dashboard');
+                } else {
+                    echo "Login gagal";
+                }
+            }
         }
     }
 }
