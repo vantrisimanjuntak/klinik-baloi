@@ -1,29 +1,6 @@
 <div class="container-fluid mt-4" style="background-color: black">
     <div class="row">
-        <div class="col-lg-6 mt-5 text-white ">
-            <div class="container">
-                <img src="<?= base_url('assets/images/logo-ppid.png') ?>" style="max-width:180px" alt="">
-                <p class="text-left pt-3">Dalam rangka mewujudkan open goverment Indonesia dan sebagai implementasi Undang-Undang Nomor 25 Tahun 2009, Badan Pengusaha Batam yang merupakan institusi pemerintah melakukan berbagai cara dan upaya untuk peningkatan pelayanan publik, diantaranya dengan pengelolaan sistem informasi pelayanan publik. Pengelolaan ini dibuat dan dirancang untuk mempermundah komunikasi dan interaksi antara publik dengan Badan Pengusaha Batam</p>
-                <h5 class="pt-3 font-weight-bold">Media Sosial Kami </h5>
-                <div class="container w-25 float-left">
-                    <div class="row float-left">
-                        <div class="col-md-3">
-                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-3">
-                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-3">
-                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-3">
-                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 mt-5 text-white">
+        <div class="col-lg-6 mt-5 p-3 text-white">
             <div class="row">
                 <div class="col-lg-6">
                     <h5 class="font-weight-bold">Kantor Batam</h5>
@@ -71,9 +48,31 @@
 
                             Sistem Pengadaan Secara Elektronik</li>
                         <li class="mt-2"><i class="fa fa-external-link" aria-hidden="true"></i>
-
                             Layanan Data dan Informasi</li>
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mt-5 text-white ">
+            <div class="container">
+                <img src="<?= base_url('assets/images/logo-ppid.png') ?>" style="max-width:180px" alt="">
+                <p class="text-justify pt-3">Dalam rangka mewujudkan open goverment Indonesia dan sebagai implementasi Undang-Undang Nomor 25 Tahun 2009, Badan Pengusaha Batam yang merupakan institusi pemerintah melakukan berbagai cara dan upaya untuk peningkatan pelayanan publik, diantaranya dengan pengelolaan sistem informasi pelayanan publik. Pengelolaan ini dibuat dan dirancang untuk mempermundah komunikasi dan interaksi antara publik dengan Badan Pengusaha Batam</p>
+                <h5 class="pt-3 font-weight-bold">Media Sosial Kami </h5>
+                <div class="container w-25 float-left">
+                    <div class="row float-left">
+                        <div class="col-md-3">
+                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
