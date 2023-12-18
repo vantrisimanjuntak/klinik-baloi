@@ -6,6 +6,7 @@
     }
     function index()
     {
-        echo "Hai";
+        $data['title'] = 'Dashboard Admin';
+        $this->load->view('v_dashboard', $data);
     }
 }
