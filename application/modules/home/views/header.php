@@ -44,9 +44,6 @@
                                 <a class="dropdown-item" href="#">Link 3</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"> Info Layanan</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="about.html"> SOP Layanan Publik</a>
                             <div class="dropdown-menu">
@@ -59,20 +56,10 @@
                             <a class="nav-link" href="about.html"> Video </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Galeri</a>
+                            <a href="<?= base_url('registrasi'); ?>">
+                                <button type="button" class="btn btn-round btn-warning text-white font-weight-bold">Registrasi</button>
+                            </a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="about.html"> JDIH</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Link 1</a>
-                                <a class="dropdown-item" href="#">Link 2</a>
-                                <a class="dropdown-item" href="#">Link 3</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Satu Data</a>
-                        </li>
-
                         <form class="form-inline">
                             <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                 <i class="fa fa-search" aria-hidden="true"></i>

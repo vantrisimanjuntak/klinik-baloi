@@ -26,19 +26,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html"> SOP Layanan Publik</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"> Video </a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Galeri</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">JDIH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Satu Data</a>
-                    </li>
-
                     <form class="form-inline">
                         <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                             <i class="fa fa-search" aria-hidden="true"></i>
