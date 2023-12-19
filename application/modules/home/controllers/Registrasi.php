@@ -9,4 +9,9 @@
         $data['title'] = 'Form Pendaftaran';
         $this->load->view('v_pendaftaran', $data);
     }
+    function submit()
+    {
+        $nama = $this->input->post('nama');
+        echo $nama;
+    }
 }

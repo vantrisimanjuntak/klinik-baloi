@@ -56,49 +56,49 @@
         <?php $this->load->view('header'); ?>
         <div class="container mt-4 w-75 pb-5 bg-white">
             <h5 class="text-center font-weight-bold">Form Pendaftaran</h5>
-            <form>
+            <form action="<?= base_url('registrasi/submit'); ?>" method="POST">
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-12 col-md-10 col">
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" name="nama" id="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">No. KTP</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword3">
+                        <input type="text" class="form-control" name="no_ktp" id="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <textarea name="" class="form-control" id="" cols="20" rows="10"></textarea>
+                        <textarea name="" class="form-control" id="" cols="20" name="alamat" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-5">
-                        <select class="custom-select">
+                        <select class="custom-select" name="jenis_kelamin">
                             <option selected> -- Pilih Jenis Kelamin --</option>
-                            <option value="1">Pria</option>
-                            <option value="2">Wanita</option>
+                            <option value="pria">Pria</option>
+                            <option value="wanita">Wanita</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Layanan</label>
                     <div class="col-sm-8">
-                        <select class="custom-select">
+                        <select class="custom-select" name="layanan">
                             <option selected> -- Pilih Jenis Layanan --</option>
-                            <option value="1">Layanan Poli Umum</option>
-                            <option value="2">Layanan Poli Gigi dan Kesehatan Mulut</option>
+                            <option value="layanan_poli_umum">Layanan Poli Umum</option>
+                            <option value="layanan_poli_gigi_mulut">Layanan Poli Gigi dan Kesehatan Mulut</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Tanggal Kontrol</label>
                     <div class="col-sm-10">
-                        <input id="datepicker" type="text" class="form-control" width="276" />
+                        <input id="datepicker" type="text" name="tgl_kontrol" class="form-control" width="276" />
                         <script type="text/javascript">
                             $('#datepicker').datepicker({
                                 uiLibrary: 'bootstrap4',
