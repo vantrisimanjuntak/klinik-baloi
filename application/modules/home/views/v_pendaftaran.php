@@ -54,19 +54,19 @@
     <div class="hero_area">
 
         <?php $this->load->view('header'); ?>
-        <div class="container mt-4 w-50 pb-5 bg-white">
+        <div class="container mt-4 w-75 pb-5 bg-white">
             <h5 class="text-center font-weight-bold">Form Pendaftaran</h5>
             <form>
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nama">
+                    <label for="" class="col-sm-2 col-form-label">Nama</label>
+                    <div class="col-sm-12 col-md-10 col">
+                        <input type="text" class="form-control" id="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">No. KTP</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="Password">
+                    <label for="" class="col-sm-2 col-form-label">No. KTP</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="inputPassword3">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-5">
                         <select class="custom-select">
                             <option selected> -- Pilih Jenis Kelamin --</option>
                             <option value="1">Pria</option>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Layanan</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <select class="custom-select">
                             <option selected> -- Pilih Jenis Layanan --</option>
                             <option value="1">Layanan Poli Umum</option>
@@ -108,11 +108,14 @@
                         </script>
                     </div>
                 </div>
+                <div class="container-fluid">
+                    <button class="btn btn-primary pull-right">
+                        Daftar
+                    </button>
+                </div>
             </form>
         </div>
     </div>
-
-
 
     <!-- footer -->
     <?php $this->load->view('footer'); ?>
