@@ -3,15 +3,15 @@
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Main_model');
     }
     function index()
     {
-        $data['title'] = 'Dashboard Admin';
-        $this->load->view('v_dashboard', $data);
-    }
-    function dokter()
-    {
-        $data['title'] = 'Dokter';
-        $this->load->view('v_dokter', $data);
+        if ($this->session->userdata('username')) {
+            $data['title'] = 'Dashboard Admin';
+            $this->load->view('v_dashboard', $data);
+        } else {
+            echo "Error";
+        }
     }
 }

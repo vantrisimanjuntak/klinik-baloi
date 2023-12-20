@@ -11,7 +11,12 @@
         $query = $this->db->get('admin');
 
         if ($query->num_rows() > 0) {
-            # code...
+            foreach ($query->result_array() as $row) {
+                $sess = array(
+                    'username' => $row['username']
+                );
+            }
+            $this->session->set_userdata($sess);
 
             return TRUE;
         } else {
