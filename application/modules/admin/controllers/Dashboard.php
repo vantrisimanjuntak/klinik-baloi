@@ -11,7 +11,7 @@
             $data['title'] = 'Dashboard Admin';
             $this->load->view('v_dashboard', $data);
         } else {
-            echo "Error";
+            redirect('admin/login');
         }
     }
 }
