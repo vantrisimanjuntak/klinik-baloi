@@ -3,6 +3,7 @@
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Model_home');
     }
     function index()
     {
@@ -12,6 +13,17 @@
     function submit()
     {
         $nama = $this->input->post('nama');
-        echo $nama;
+        $no_ktp = $this->input->post('no_ktp');
+        $alamat = $this->input->post('alamat');
+        $jk = $this->input->post('jenis_kelamin');
+        $jenis_layanan = $this->input->post('jenis_layanan');
+        $tanggal_kontrol = date('y-m-d', strtotime($this->input->post('tgl_kontrol')));
+
+        $queryRegistrasi = $this->Model_home->registrasi($nama, $no_ktp, $alamat, $jk, $jenis_layanan, $tanggal_kontrol);
+        if ($queryRegistrasi) {
+            $this->session->set_flashdata('flash', 'Data berhasil diinput');
+        } else {
+            echo "Ada yang error";
+        }
     }
 }

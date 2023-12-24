@@ -35,6 +35,9 @@
 <link href="<?= base_url('assets/tambahan.css'); ?>" rel="stylesheet" />
 
 
+<link rel="stylesheet" href="<?= base_url('assets/sweetalert2-11.10.1/package/dist/sweetalert2.min.css'); ?>   ">
+
+
 
 <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
@@ -47,11 +50,18 @@
 <!-- custom js -->
 <script type="text/javascript" src="<?= base_url('assets/asset-home/carint-1.0.0/js/custom.js'); ?>"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="<?= base_url('assets/sweetalert2-11.10.1/package/dist/sweetalert2.min.js'); ?>"></script>
+
+
+
 </head>
 
 <body style="background:#c5eef6;">
 
     <div class="hero_area">
+
+        <div class="flash-data-for-dosen" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 
         <?php $this->load->view('header'); ?>
         <div class="container mt-4 w-75 pb-5 bg-white">
@@ -72,7 +82,7 @@
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <textarea name="" class="form-control" id="" cols="20" name="alamat" rows="10"></textarea>
+                        <textarea class="form-control" id="" cols="20" name="alamat" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -88,7 +98,7 @@
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Layanan</label>
                     <div class="col-sm-8">
-                        <select class="custom-select" name="layanan">
+                        <select class="custom-select" name="jenis_layanan">
                             <option selected> -- Pilih Jenis Layanan --</option>
                             <option value="layanan_poli_umum">Layanan Poli Umum</option>
                             <option value="layanan_poli_gigi_mulut">Layanan Poli Gigi dan Kesehatan Mulut</option>
@@ -98,21 +108,20 @@
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Tanggal Kontrol</label>
                     <div class="col-sm-10">
-                        <input id="datepicker" type="text" name="tgl_kontrol" class="form-control" width="276" />
+                        <input id="datepicker" type="text" name="tgl_kontrol" class="date form-control" width="276" />
                         <script type="text/javascript">
-                            $('#datepicker').datepicker({
-                                uiLibrary: 'bootstrap4',
-                                timezone: 'Asia/Jakarta',
-                                dateFormat: "dd-mm-yy"
+                            $(".date").datepicker({
+                                format: "dd-mm-yyyy",
                             });
                         </script>
                     </div>
                 </div>
                 <div class="container-fluid">
-                    <button class="btn btn-primary pull-right">
+                    <button type="button" class="btn btn-primary pull-right" id="btnSubmit">
                         Daftar
                     </button>
                 </div>
+
             </form>
         </div>
     </div>
@@ -131,6 +140,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>
     <!-- End Google Map -->
+    <!--  -->
+    <script type="text/javascript" src="<?= base_url('assets/tambahan.js') ?>"></script>
 </body>
 
 </html>
