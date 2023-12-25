@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2023 at 11:20 AM
+-- Generation Time: Dec 25, 2023 at 04:26 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,31 +24,71 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `user` (
-  `id` int(4) NOT NULL,
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `admin`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`) VALUES
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 (1, 'd033e22ae348aeb5660fc2140aec35850c4da997', 'd033e22ae348aeb5660fc2140aec35850c4da997');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pendaftar`
+--
+
+CREATE TABLE `pendaftar` (
+  `id` int(10) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `no_ktp` int(15) NOT NULL,
+  `alamat` text NOT NULL,
+  `jenis_kelamin` varchar(15) NOT NULL,
+  `layanan` varchar(50) NOT NULL,
+  `tgl_kontrol` date NOT NULL,
+  `status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pendaftar`
+--
+
+INSERT INTO `pendaftar` (`id`, `nama`, `no_ktp`, `alamat`, `jenis_kelamin`, `layanan`, `tgl_kontrol`, `status`) VALUES
+(4, 'Vantri', 1209022, 'asd', 'Pria', 'Layanan Poli Gigi dan Mulut', '2023-12-25', 'Pending');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user`
+-- Indexes for table `admin`
 --
-ALTER TABLE `user`
+ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pendaftar`
+--
+ALTER TABLE `pendaftar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pendaftar`
+--
+ALTER TABLE `pendaftar`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
