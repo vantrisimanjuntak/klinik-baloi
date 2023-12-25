@@ -65,18 +65,18 @@
         <?php $this->load->view('header'); ?>
         <div class="container mt-4 w-75 pb-5 bg-white">
             <div class="flash-data-for-registrasi" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-            <h5 class="text-center font-weight-bold">Form Pendaftaran</h5>
+            <h5 class="text-center font-weight-bold pt-4 pb-3">Form Pendaftaran</h5>
             <form action="<?= base_url('registrasi/submit'); ?>" method="POST" id="submitRegistrasi">
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-12 col-md-10 col">
-                        <input type="text" class="form-control" name="nama" id="">
+                        <input type="text" class="form-control" autocomplete="off" name="nama" id="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">No. KTP</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="no_ktp" id="">
+                        <input type="text" class="form-control" autocomplete="off" name="no_ktp" id="">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -89,9 +89,8 @@
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-5">
                         <select class="custom-select" name="jenis_kelamin">
-                            <option selected> -- Pilih Jenis Kelamin --</option>
-                            <option value="pria">Pria</option>
-                            <option value="wanita">Wanita</option>
+                            <option value="Pria">Pria</option>
+                            <option value="Wanita">Wanita</option>
                         </select>
                     </div>
                 </div>
@@ -99,9 +98,8 @@
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Layanan</label>
                     <div class="col-sm-8">
                         <select class="custom-select" name="jenis_layanan">
-                            <option selected> -- Pilih Jenis Layanan --</option>
-                            <option value="layanan_poli_umum">Layanan Poli Umum</option>
-                            <option value="layanan_poli_gigi_mulut">Layanan Poli Gigi dan Kesehatan Mulut</option>
+                            <option value="Layanan Poli Umum">Layanan Poli Umum</option>
+                            <option value="Layanan Poli Gigi dan Mulut">Layanan Poli Gigi dan Kesehatan Mulut</option>
                         </select>
                     </div>
                 </div>

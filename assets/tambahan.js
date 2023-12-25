@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     const alertSuccessRegistration = $(".flash-data-for-registrasi").data("flashdata");
     if (alertSuccessRegistration) {
-        Swal.fire("Berhasil", "Skripsi berhasil " + alertSuccessRegistration, "success");
+        Swal.fire("Berhasil", "Pendaftaran " + alertSuccessRegistration, "success");
     }
 
 
