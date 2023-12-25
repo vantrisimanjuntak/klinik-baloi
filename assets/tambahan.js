@@ -18,9 +18,9 @@ $(document).ready(function () {
         });
     });
 
-    const skripsi = $(".flash-data-for-skripsi").data("flashdata");
-    if (skripsi) {
-        Swal.fire("Berhasil", "Skripsi berhasil " + skripsi, "success");
+    const alertSuccessRegistration = $(".flash-data-for-registrasi").data("flashdata");
+    if (alertSuccessRegistration) {
+        Swal.fire("Berhasil", "Skripsi berhasil " + alertSuccessRegistration, "success");
     }
 
 
