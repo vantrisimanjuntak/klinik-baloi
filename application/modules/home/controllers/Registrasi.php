@@ -21,7 +21,8 @@
 
         $queryRegistrasi = $this->Model_home->registrasi($nama, $no_ktp, $alamat, $jk, $jenis_layanan, $tanggal_kontrol);
         if ($queryRegistrasi) {
-            $this->session->set_flashdata('flash', 'Data berhasil diinput');
+            $this->session->set_flashdata('flash', 'tambah');
+            redirect('registrasi');
         } else {
             echo "Ada yang error";
         }

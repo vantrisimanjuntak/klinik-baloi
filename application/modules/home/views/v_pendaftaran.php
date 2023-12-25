@@ -61,12 +61,12 @@
 
     <div class="hero_area">
 
-        <div class="flash-data-for-dosen" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 
         <?php $this->load->view('header'); ?>
         <div class="container mt-4 w-75 pb-5 bg-white">
+            <div class="flash-data-for-skripsi" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
             <h5 class="text-center font-weight-bold">Form Pendaftaran</h5>
-            <form action="<?= base_url('registrasi/submit'); ?>" method="POST">
+            <form action="<?= base_url('registrasi/submit'); ?>" method="POST" id="submitRegistrasi">
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-12 col-md-10 col">
