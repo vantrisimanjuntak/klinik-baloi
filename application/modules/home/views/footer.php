@@ -1,13 +1,46 @@
 <div class="container-fluid mt-4" style="background-color: black">
     <div class="row">
+        <div class="col-lg-6 mt-5 text-white ">
+            <div class="container">
+                <div class="row d-inline-flex p-2">
+                    <div class="col-md-3">
+                        <img src="<?= base_url('assets/images/a.jpg') ?>" style="max-width:120px" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="pl-3">&nbsp;&nbsp;Klinik Baloi</h2>
+                    </div>
+                </div>
+                <p class="text-justify pt-3"> Klinik Baloi berlokasi di Jalan Bunga Raya Kantor Camat Lubuk Baja yang membuka layanan poli umum, dan poli gigi. Klinik ini berada di bawah naungan Rumah Sakit Badan Pengusahaan (BP) Batam merupakan Rumah Sakit pemerintah pertama di Batam, Kepulauan Riau yang berdiri sejak tahun 1971. </p>
+                <h5 class="pt-3 font-weight-bold">Media Sosial Kami </h5>
+                <div class="container-fluid w-25 float-left">
+                    <div class="row">
+                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                            <a href="https://www.instagram.com/rsbp.batam/" style="text-decoration: none; color:white" target="_blank"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                            <a href="https://www.youtube.com/@RSBPBatam" style="text-decoration: none; color:white" target="_blank">
+                                <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-6 mt-5 p-3 text-white">
             <div class="row">
                 <div class="col-lg-6">
-                    <h5 class="font-weight-bold">Kantor Batam</h5>
+                    <h5 class="font-weight-bold">Klinik Baloi</h5>
                     <p>
-                        Jalan Ibnu Sutowo No. 1 Batam Center
-                        <br>Batam Kepulauan Riau, Indonesia, 29400
-                        <br>+628778-462-047 / 462 048
+                        Jl. Bunga Raya No.1, Baloi Indah, Kec. Lubuk Baja, Kota Batam
+                        <br>Kepulauan Riau, Indonesia, 29444
+                        <br>0778 458503
                         <br>humas@bpbatam.go.id
                     </p>
                     <p style="color:orange; font-weight:bold"><i class="fa fa-map-marker" aria-hidden="true"></i> Petunjuk</p>
@@ -16,15 +49,15 @@
                     <h5 class="font-weight-bold">Jam Operasional</h5>
                     <p>
                         Senin - Jumat
-                        <br> 09.00 - 16.00
+                        <br> 08.00 - 21.00 WIB
                     </p>
                 </div>
                 <div class="col-lg-6 mt-3">
-                    <h5 class="font-weight-bold">Kantor Perwakilan Jakarta</h5>
+                    <h5 class="font-weight-bold">Rumah Sakit BP Batam</h5>
                     <p>
-                        Jalan Ibnu Sutowo No. 1 Batam Center
-                        <br>Batam Kepulauan Riau, Indonesia, 29400
-                        <br>+628778-462-047 / 462 048
+                        Jl. Dr. Ciptomangunkusumo No.1, Tj. Pinggir, Kec. Sekupang,
+                        <br>Kota Batam, Kepulauan Riau, Indonesia, 29400
+                        <br>(0778) 322121
                         <br>humas@bpbatam.go.id
                     </p>
                     <p style="color:orange; font-weight:bold"><i class="fa fa-map-marker" aria-hidden="true"></i> Petunjuk</p>
@@ -53,35 +86,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 mt-5 text-white ">
-            <div class="container">
-                <div class="row d-inline-flex p-2">
-                    <div class="col-md-3">
-                        <img src="<?= base_url('assets/images/a.jpg') ?>" style="max-width:120px" alt="">
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="pl-3">Klinik Balai Batam</h2>
-                    </div>
-                </div>
-                <p class="text-justify pt-3">Dalam rangka mewujudkan open goverment Indonesia dan sebagai implementasi Undang-Undang Nomor 25 Tahun 2009, Badan Pengusaha Batam yang merupakan institusi pemerintah melakukan berbagai cara dan upaya untuk peningkatan pelayanan publik, diantaranya dengan pengelolaan sistem informasi pelayanan publik. Pengelolaan ini dibuat dan dirancang untuk mempermundah komunikasi dan interaksi antara publik dengan Badan Pengusaha Batam</p>
-                <h5 class="pt-3 font-weight-bold">Media Sosial Kami </h5>
-                <div class="container w-25 float-left">
-                    <div class="row float-left">
-                        <div class="col-md-3">
-                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-3">
-                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-3">
-                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-3">
-                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
