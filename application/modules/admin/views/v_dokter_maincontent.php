@@ -32,37 +32,34 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form>
-
+                        <form action="<?= base_url('admin/dokter/addDokter'); ?>" method="POST">
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-md-2 col-lg-2 col-form-label">Nama Dokter</label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="inputPassword" placeholder="">
+                                    <input type="text" class="form-control" id="" name="nama" placeholder="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Hari Pelayanan</label>
-                                <div class="col-sm-10">
-                                    <input id="birthday" class="date-picker form-control" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
-                                    <script>
-                                        function timeFunctionLong(input) {
-                                            setTimeout(function() {
-                                                input.type = 'text';
-                                            }, 60000);
-                                        }
-                                    </script>
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" name="tanggal_pelayanan" id="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Jam Pelayanan</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword">
+                                <div class="col-sm-4">
+                                    <div class='input-group date' id='myDatepicker3'>
+                                        <input type='text' name="jam_pelayanan" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Jabatan</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword">
+                                    <input type="text" name="jabatan" class="form-control" id="">
                                 </div>
                             </div>
                             <div class="ln_solid"></div>
@@ -95,54 +92,45 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form>
+                        <!-- Table -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <p class="text-muted font-13 m-b-30">
+                                        The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
+                                    </p>
+                                    <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nama</th>
+                                                <th>Tanggal Pelayanan</th>
+                                                <th>Jam Pelayanan</th>
+                                                <th>Jabatan</th>
 
-                            <div class="form-group row">
-                                <label for="staticEmail" class="col-sm-2 col-md-2 col-lg-2 col-form-label">Nama Dokter</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="inputPassword" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Hari Pelayanan</label>
-                                <div class="col-sm-10">
-                                    <input id="birthday" class="date-picker form-control" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
-                                    <script>
-                                        function timeFunctionLong(input) {
-                                            setTimeout(function() {
-                                                input.type = 'text';
-                                            }, 60000);
-                                        }
-                                    </script>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Jam Pelayanan</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Jabatan</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword">
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
-                            <div class="item form-group ">
-                                <div class="col-md-10 col-sm-10 offset-md-2 d-flex justify-content-end">
-                                    <button class="btn btn-primary" type="button">Batal</button>
-                                    <button class="btn btn-primary" type="reset">Reset</button>
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </div>
-                            </div>
+                                            </tr>
+                                        </thead>
 
-                        </form>
+                                        <tbody>
+                                            <?php
+                                            $id = 1;
+
+                                            foreach ($allDokter as $data) :  ?>
+                                                <tr>
+                                                    <td><?= $id++; ?> </td>
+                                                    <td><?= $data['nama']; ?></td>
+                                                    <td><?= date('d M Y', strtotime($data['tgl_pelayanan']));  ?></td>
+                                                    <td><?= $data['jam_pelayanan']; ?></td>
+                                                    <td><?= $data['jabatan']; ?></td>
+
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Table -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-    </div>
-</div>

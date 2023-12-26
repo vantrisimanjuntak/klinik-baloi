@@ -23,4 +23,30 @@
             return FALSE;
         }
     }
+
+    // Model For Dokter
+
+    // Add Dokter
+    function addDokter($nama, $hari_pelayanan, $jam_pelayanan, $jabatan)
+    {
+        $data = array(
+            'nama' => $nama,
+            'tgl_pelayanan' => $hari_pelayanan,
+            'jam_pelayanan' => $jam_pelayanan,
+            'jabatan' => $jabatan
+        );
+        if ($data) {
+            $this->db->insert('dokter', $data);
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+    // End Add Dokter
+
+    function getAllDokter()
+    {
+        $queryGetAllDokter = $this->db->get('dokter');
+        return $queryGetAllDokter->result_array();
+    }
 }

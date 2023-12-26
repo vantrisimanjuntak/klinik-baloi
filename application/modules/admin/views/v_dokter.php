@@ -30,6 +30,9 @@
     <link href="<?= base_url('assets/assets-admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('assets/assets-admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css'); ?>" rel="stylesheet">
 
+    <link href="<?= base_url('assets/assets-admin/vendors/bootstrap-daterangepicker/daterangepicker.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/assets-admin/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'); ?>" rel="stylesheet">
+
 
 
     <!-- JQVMap -->
@@ -58,7 +61,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="<?= base_url('assets/assets-admin/vendors/jquery/dist/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('assets/assets-admin/vendors/jquery/dist/jquery.min.js'); ?>"></script>
     <!-- Bootstrap -->
     <script src="<?= base_url('assets/assets-admin/vendors/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
     <!-- FastClick -->
@@ -107,13 +110,23 @@
     <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-buttons/js/buttons.html5.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-buttons/js/buttons.print.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js'); ?>"></script>
-    <script src="<?= base_url('assets-assets-admin/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js'); ?>"></script>
-    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-    <script src="../vendors/jszip/dist/jszip.min.js"></script>
-    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js'); ?>"></script>
+    <script src="<?= base_url('assets/assets-admin/vendors/datatables.net-scroller/js/dataTables.scroller.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/assets-admin/vendors/jszip/dist/jszip.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/assets-admin/vendors/pdfmake/build/pdfmake.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/assets-admin/vendors/pdfmake/build/vfs_fonts.js'); ?>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(function() {
+
+            $('#myDatepicker3').datetimepicker({
+                format: 'HH:mm'
+            });
+        });
+    </script>
+
 
 </body>
 
