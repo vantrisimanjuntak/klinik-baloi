@@ -10,7 +10,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<!-- <link rel="shortcut icon" href="images/fevicon.png" type=""> -->
+<link rel="shortcut icon" href="<?= base_url('assets/images/logo-ppid.png') ?>" type="">
 
 <title> <?= $title; ?> </title>
 

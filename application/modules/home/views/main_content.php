@@ -2,7 +2,7 @@
     <div class="container-fluid no-padding px-0">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-danger font-weight-bold">Klinik Baloi Batam</h1>
+                <h1 class="text-white font-weight-bold" style="font-size:75px;">Klinik Baloi <br> Batam</h1>
             </div>
         </div>
     </div>

@@ -1,22 +1,5 @@
 <header class="header_section">
-    <div class="header_top">
-        <div class="container-fluid ">
-            <div class="contact_nav">
-                <a href="">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <span>
-                        Call : (62) 8628931
-                    </span>
-                </a>
-                <a href="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span>
-                        Email : ppid@batam.go.id
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
+
     <div class="header_bottom">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-xl custom_nav-container" style="font-size: 13px;">

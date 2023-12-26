@@ -1,30 +1,30 @@
 <div class="container-fluid mt-4" style="background-color: black">
     <div class="row">
-        <div class="col-lg-6 mt-5 text-white ">
-            <div class="container">
+        <div class="col-lg-6 mt-5 text-white">
+            <div class="container-fluid">
                 <div class="row d-inline-flex p-2">
                     <div class="col-md-3">
-                        <img src="<?= base_url('assets/images/a.jpg') ?>" style="max-width:120px" alt="">
+                        <img src="<?= base_url('assets/images/logo-ppid.png') ?>" style="max-width:120px">
                     </div>
-                    <div class="col-md-9">
-                        <h2 class="pl-3">&nbsp;&nbsp;Klinik Baloi</h2>
-                    </div>
+                    <!-- <div class="col-md-9">
+                        <h2 class="p-3">&nbsp;&nbsp;Klinik Baloi</h2>
+                    </div> -->
                 </div>
-                <p class="text-justify pt-3"> Klinik Baloi berlokasi di Jalan Bunga Raya Kantor Camat Lubuk Baja yang membuka layanan poli umum, dan poli gigi. Klinik ini berada di bawah naungan Rumah Sakit Badan Pengusahaan (BP) Batam merupakan Rumah Sakit pemerintah pertama di Batam, Kepulauan Riau yang berdiri sejak tahun 1971. </p>
+                <p class="text-justify pt-2"> Klinik Baloi berlokasi di Jalan Bunga Raya Kantor Camat Lubuk Baja yang membuka layanan poli umum, dan poli gigi. Klinik ini berada di bawah naungan Rumah Sakit Badan Pengusahaan (BP) Batam merupakan Rumah Sakit pemerintah pertama di Batam, Kepulauan Riau yang berdiri sejak tahun 1971. </p>
                 <h5 class="pt-3 font-weight-bold">Media Sosial Kami </h5>
-                <div class="container-fluid w-25 float-left">
+                <div class="container w-50 float-left">
                     <div class="row">
-                        <div class="col col-xs-3 col-sm-3 col-md-3">
-                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                        <div class="col-3 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <i class=" fa fa-facebook-official fa-2x" aria-hidden="true"></i>
                         </div>
-                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                        <div class="col-3 col-xs-3 col-sm-3 col-md-3">
                             <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
                         </div>
-                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                        <div class="col-3 col-xs-3 col-sm-3 col-md-3">
                             <a href="https://www.instagram.com/rsbp.batam/" style="text-decoration: none; color:white" target="_blank"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <div class="col col-xs-3 col-sm-3 col-md-3">
+                        <div class="col-3 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <a href="https://www.youtube.com/@RSBPBatam" style="text-decoration: none; color:white" target="_blank">
                                 <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
                             </a>
