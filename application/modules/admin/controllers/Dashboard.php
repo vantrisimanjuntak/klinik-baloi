@@ -8,7 +8,7 @@
     function index()
     {
         if ($this->session->userdata('username')) {
-            $data['title'] = 'Dashboard Admin';
+            $data['title'] = 'Dashboard - Klinik Baloi';
             $this->load->view('v_dashboard', $data);
         } else {
             redirect('admin/login');

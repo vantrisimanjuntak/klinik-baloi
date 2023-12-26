@@ -13,11 +13,11 @@
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $row) {
                 $sess = array(
-                    'username' => $row['username']
+                    'username' => $row['username'],
+                    'nama' => $row['nama']
                 );
             }
             $this->session->set_userdata($sess);
-
             return TRUE;
         } else {
             return FALSE;

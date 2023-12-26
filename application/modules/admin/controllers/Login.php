@@ -7,7 +7,7 @@
     }
     function index()
     {
-        $data['title'] = 'Login Admin';
+        $data['title'] = 'Login - Klinik Baloi';
         $this->load->view('v_login', $data);
     }
     function checklogin()
