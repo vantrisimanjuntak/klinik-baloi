@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2023 at 04:26 PM
+-- Generation Time: Dec 26, 2023 at 06:25 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,8 +38,39 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'd033e22ae348aeb5660fc2140aec35850c4da997', 'd033e22ae348aeb5660fc2140aec35850c4da997');
+INSERT INTO `admin` (`id`, `nama`, `username`, `password`) VALUES
+(1, 'Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'd033e22ae348aeb5660fc2140aec35850c4da997');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dokter`
+--
+
+CREATE TABLE `dokter` (
+  `id` int(12) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `tgl_pelayanan` date NOT NULL,
+  `jam_pelayanan` time NOT NULL,
+  `jabatan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dokter`
+--
+
+INSERT INTO `dokter` (`id`, `nama`, `tgl_pelayanan`, `jam_pelayanan`, `jabatan`) VALUES
+(1, 'Vantri', '2023-12-26', '10:00:00', 'Dokter Kepala');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pasien`
+--
+
+CREATE TABLE `pasien` (
+  `no_mr` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -75,6 +107,18 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `dokter`
+--
+ALTER TABLE `dokter`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pasien`
+--
+ALTER TABLE `pasien`
+  ADD PRIMARY KEY (`no_mr`);
+
+--
 -- Indexes for table `pendaftar`
 --
 ALTER TABLE `pendaftar`
@@ -83,6 +127,12 @@ ALTER TABLE `pendaftar`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `dokter`
+--
+ALTER TABLE `dokter`
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pendaftar`
