@@ -7,7 +7,7 @@
     }
     function index()
     {
-        $data['title'] = 'Dokter';
+        $data['title'] = 'Dokter - Panel Admin Klinik Baloi';
         $data['allDokter'] = $this->Main_model->getAllDokter();
         $this->load->view('v_dokter', $data);
     }
