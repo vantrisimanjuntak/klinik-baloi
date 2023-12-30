@@ -11,4 +11,8 @@
         $data['allPendaftar'] = $this->Main_model->getAllPendaftar();
         $this->load->view('v_pendaftar', $data);
     }
+    function deletePendaftar($id)
+    {
+        echo $id;
+    }
 }

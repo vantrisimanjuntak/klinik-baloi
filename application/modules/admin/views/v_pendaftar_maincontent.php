@@ -63,7 +63,8 @@
                                                     <td><?= $data['alamat']; ?></td>
                                                     <td><?= $data['status']; ?></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-warning btn-sm font-weight-bold text-white">Konfirmasi</button>
+                                                        <button type="button" id="<?= $data['id']; ?>" class="btn btn-warning btn-sm font-weight-bold text-white btn-konfirmasi">Konfirmasi</button>
+                                                        <button type="button" id="<?= $data['id']; ?>" class="btn btn-danger btn-sm font-weight-bold text-white btn-hapus">Hapus</button>
                                                     </td>
 
                                                 </tr>
