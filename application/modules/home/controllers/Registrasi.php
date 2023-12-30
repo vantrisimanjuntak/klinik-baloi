@@ -3,6 +3,7 @@
     function __construct()
     {
         parent::__construct();
+        $this->load->library('session');
         $this->load->model('Model_home');
     }
     function index()

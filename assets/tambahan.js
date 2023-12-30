@@ -27,7 +27,13 @@ $(document).ready(function () {
 
     // Alert Validasi Pendaftar
 
+
+
     $(".btn-konfirmasi").click(function () {
+
+        var base_url = window.location.origin + '/projectdika/admin/pendaftar/confirmPendaftar/';
+        var id = $(this).attr('id');
+
         Swal.fire({
             title: "Apakah anda yakin?",
             text: "Melakukan konfirmasi user",
@@ -39,10 +45,15 @@ $(document).ready(function () {
             cancelButtonText: "Batal",
         }).then((result) => {
             if (result.value) {
-                $("#submitRegistrasi").submit();
+                window.location = base_url + id
             }
         });
     });
+
+    const alertSuccessConfirmPendaftar = $(".flash-data-for-confirm").data("flashdata");
+    if (alertSuccessConfirmPendaftar) {
+        Swal.fire("Berhasil", " Pendaftar sudah " + alertSuccessConfirmPendaftar, "success");
+    }
     // End Alert Validasi Pendaftar
 
     // Alert Hapus Pendaftar
@@ -67,6 +78,13 @@ $(document).ready(function () {
         });
     });
     // End Alert Hapus Pendaftar
+
+    const alertSuccessDeletePendaftar = $(".flash-data-for-delete").data("flashdata");
+    if (alertSuccessDeletePendaftar) {
+        Swal.fire("Berhasil", " Data sudah " + alertSuccessDeletePendaftar, "success");
+    }
+
+
 
 });
 

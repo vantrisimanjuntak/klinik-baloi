@@ -17,6 +17,8 @@
             </div>
         </div>
         <div class="clearfix"></div>
+        <div class="flash-data-for-confirm" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+        <div class="flash-data-for-delete" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
         <div class="row">
             <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
@@ -63,8 +65,8 @@
                                                     <td><?= $data['alamat']; ?></td>
                                                     <td><?= $data['status']; ?></td>
                                                     <td>
-                                                        <button type="button" id="<?= $data['id']; ?>" class="btn btn-warning btn-sm font-weight-bold text-white btn-konfirmasi">Konfirmasi</button>
-                                                        <button type="button" id="<?= $data['id']; ?>" class="btn btn-danger btn-sm font-weight-bold text-white btn-hapus">Hapus</button>
+                                                        <button type="button" id="<?= $data['id_shadow']; ?>" class="btn btn-warning btn-sm font-weight-bold text-white btn-konfirmasi">Konfirmasi</button>
+                                                        <button type="button" id="<?= $data['id_shadow']; ?>" class="btn btn-danger btn-sm font-weight-bold text-white btn-hapus">Hapus</button>
                                                     </td>
 
                                                 </tr>

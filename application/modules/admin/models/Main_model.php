@@ -55,13 +55,26 @@
         $queryGetAllPendaftar = $this->db->get('pendaftar');
         return $queryGetAllPendaftar->result_array();
     }
-    function deletePendaftar($id)
+    function deletePendaftar($id_shadow)
     {
-        $this->db->where('id', $id);
+        $this->db->where('id_shadow', $id_shadow);
         $queryDeletePendaftar = $this->db->get('pendaftar');
         if ($queryDeletePendaftar->num_rows() > 0) {
-            $this->db->where('id', $id);
+            $this->db->where('id_shadow', $id_shadow);
             $this->db->delete('pendaftar');
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+    function confirmPendaftar($id_shadow)
+    {
+        $this->db->where('id_shadow', $id_shadow);
+        $queryConfirmPendaftar = $this->db->get('pendaftar');
+        if ($queryConfirmPendaftar->num_rows() > 0) {
+            $this->db->set('status', 'Aktif');
+            $this->db->where('id_shadow', $id_shadow);
+            $this->db->update('pendaftar');
             return TRUE;
         } else {
             return FALSE;
