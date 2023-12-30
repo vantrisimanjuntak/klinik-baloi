@@ -13,6 +13,11 @@
     }
     function deletePendaftar($id)
     {
-        echo $id;
+        $queryDeletePendaftar = $this->Main_model->deletePendaftar($id);
+        if ($queryDeletePendaftar) {
+            redirect('admin/pendaftar');
+        } else {
+            redirect('admin/pendaftar');
+        }
     }
 }

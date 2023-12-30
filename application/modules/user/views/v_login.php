@@ -50,7 +50,7 @@
                     <form action="<?= base_url('user/login/checklogin'); ?>" method="POST">
                         <div class="form-group">
                             <label>Nomor HP</label>
-                            <input type="text" class="form-control" autocomplete="off" name="no_hp" placeholder="Email">
+                            <input type="text" class="form-control" autocomplete="off" name="no_hp" placeholder="Nomor HP">
                         </div>
                         <div class="form-group">
                             <label>Password</label>

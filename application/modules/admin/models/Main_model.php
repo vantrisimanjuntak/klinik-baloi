@@ -55,4 +55,16 @@
         $queryGetAllPendaftar = $this->db->get('pendaftar');
         return $queryGetAllPendaftar->result_array();
     }
+    function deletePendaftar($id)
+    {
+        $this->db->where('id', $id);
+        $queryDeletePendaftar = $this->db->get('pendaftar');
+        if ($queryDeletePendaftar->num_rows() > 0) {
+            $this->db->where('id', $id);
+            $this->db->delete('pendaftar');
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }
