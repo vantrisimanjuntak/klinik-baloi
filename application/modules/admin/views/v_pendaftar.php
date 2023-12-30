@@ -54,7 +54,7 @@
             <!-- /top navigation -->
 
             <!-- page content -->
-            <?php $this->load->view('v_dokter_maincontent'); ?>
+            <?php $this->load->view('v_pendaftar_maincontent'); ?>
             <!-- page content -->
             <?php $this->load->view('v_footer'); ?>
         </div>

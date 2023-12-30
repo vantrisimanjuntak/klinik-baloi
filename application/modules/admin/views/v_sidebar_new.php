@@ -29,8 +29,8 @@
                   <ul class="nav side-menu">
                       <li><a href="<?= base_url('admin/dashboard'); ?>"><i class="fa fa-home"></i> Home</a></li>
                       <li><a href="<?= base_url('admin/dokter'); ?>"><i class="fa fa-user"></i> Dokter</a> </li>
-                      <li><a><i class="fa fa-home"></i> Pasien</a></li>
-                      <li><a><i class="fa fa-home"></i> Registrasi</a></li>
+                      <li><a href="<?= base_url('admin/pasien'); ?>"><i class="fa fa-home"></i> Pasien</a></li>
+                      <li><a href="<?= base_url('admin/pendaftar'); ?>"><i class="fa fa-home"></i> Pendaftar</a></li>
                   </ul>
               </div>
 

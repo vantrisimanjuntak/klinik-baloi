@@ -49,4 +49,10 @@
         $queryGetAllDokter = $this->db->get('dokter');
         return $queryGetAllDokter->result_array();
     }
+
+    function getAllPendaftar()
+    {
+        $queryGetAllPendaftar = $this->db->get('pendaftar');
+        return $queryGetAllPendaftar->result_array();
+    }
 }

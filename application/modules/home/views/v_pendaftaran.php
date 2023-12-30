@@ -70,50 +70,34 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-12 col-md-10 col">
-                        <input type="text" class="form-control" autocomplete="off" name="nama" id="">
+                        <input type="text" class="form-control" required autocomplete="off" name="nama" id="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">No. KTP</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" autocomplete="off" name="no_ktp" id="">
+                        <input type="text" class="form-control" required autocomplete="off" name="no_ktp" id="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">No. HP</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" required autocomplete="off" name="no_hp" id="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="" cols="20" name="alamat" rows="10"></textarea>
+                        <textarea class="form-control" id="" required cols="20" name="alamat" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                    <label for="" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-5">
-                        <select class="custom-select" name="jenis_kelamin">
-                            <option value="Pria">Pria</option>
-                            <option value="Wanita">Wanita</option>
-                        </select>
+                        <input type="password" class="form-control" required autocomplete="off" name="password" id="">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Layanan</label>
-                    <div class="col-sm-8">
-                        <select class="custom-select" name="jenis_layanan">
-                            <option value="Layanan Poli Umum">Layanan Poli Umum</option>
-                            <option value="Layanan Poli Gigi dan Mulut">Layanan Poli Gigi dan Kesehatan Mulut</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tanggal Kontrol</label>
-                    <div class="col-sm-10">
-                        <input id="datepicker" type="text" name="tgl_kontrol" class="date form-control" width="276" />
-                        <script type="text/javascript">
-                            $(".date").datepicker({
-                                format: "dd-mm-yyyy",
-                            });
-                        </script>
-                    </div>
-                </div>
+
                 <div class="container-fluid">
                     <button type="button" class="btn btn-primary pull-right" id="btnSubmit">
                         Daftar

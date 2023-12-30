@@ -4,15 +4,14 @@
     {
         parent::__construct();
     }
-    function registrasi($nama, $no_ktp, $alamat, $jk, $jenis_layanan, $tanggal_kontrol)
+    function registrasi($nama, $no_ktp, $no_hp, $alamat, $password)
     {
         $data =  array(
             'nama' => $nama,
             'no_ktp' => $no_ktp,
             'alamat' => $alamat,
-            'jenis_kelamin' => $jk,
-            'layanan' => $jenis_layanan,
-            'tgl_kontrol' => $tanggal_kontrol,
+            'no_hp' => $no_hp,
+            'password' => $password,
             'status' => 'Pending'
         );
         if ($data) {
