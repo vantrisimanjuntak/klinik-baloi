@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2023 at 06:25 AM
+-- Generation Time: Dec 31, 2023 at 06:47 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -80,21 +80,28 @@ CREATE TABLE `pasien` (
 
 CREATE TABLE `pendaftar` (
   `id` int(10) NOT NULL,
+  `id_shadow` varchar(100) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  `no_ktp` int(15) NOT NULL,
+  `no_ktp` varchar(30) NOT NULL,
+  `no_hp` text NOT NULL,
   `alamat` text NOT NULL,
-  `jenis_kelamin` varchar(15) NOT NULL,
-  `layanan` varchar(50) NOT NULL,
-  `tgl_kontrol` date NOT NULL,
+  `password` varchar(100) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `pendaftar`
+-- Table structure for table `user`
 --
 
-INSERT INTO `pendaftar` (`id`, `nama`, `no_ktp`, `alamat`, `jenis_kelamin`, `layanan`, `tgl_kontrol`, `status`) VALUES
-(4, 'Vantri', 1209022, 'asd', 'Pria', 'Layanan Poli Gigi dan Mulut', '2023-12-25', 'Pending');
+CREATE TABLE `user` (
+  `nama` varchar(100) NOT NULL,
+  `no_ktp` varchar(20) NOT NULL,
+  `alamat` text NOT NULL,
+  `jenis_kelamin` varchar(20) NOT NULL,
+  `status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -125,6 +132,12 @@ ALTER TABLE `pendaftar`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`no_ktp`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -138,7 +151,7 @@ ALTER TABLE `dokter`
 -- AUTO_INCREMENT for table `pendaftar`
 --
 ALTER TABLE `pendaftar`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
