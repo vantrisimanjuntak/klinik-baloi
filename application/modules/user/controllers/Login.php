@@ -18,12 +18,22 @@
         $queryCheckLogin = $this->Main_model->checkLogin($no_hp, $password);
         if ($queryCheckLogin->num_rows() > 0) {
             foreach ($queryCheckLogin->result_array() as $row) {
-                if ($row['status'] = 'Aktif') {
+                if ($row['status'] == 'Aktif') {
+
+                    $sess = array(
+                        'nama' => $row['nama'],
+
+                    );
+                    $this->session->set_userdata($sess);
+                    redirect('user/dashboard');
                 } else {
-                    $this->session->set_flashdata('flash', 'divalidasi');
+                    $this->session->set_flashdata('flash', 'diverifikasi');
+                    redirect('user/login');
                 }
             }
         } else {
+            $this->session->set_flashdata('flash', 'salah');
+            redirect('user/login');
             echo "Login Gagal";
         }
     }

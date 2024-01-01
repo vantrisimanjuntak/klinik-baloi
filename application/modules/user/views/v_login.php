@@ -32,6 +32,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 
+    <link rel="stylesheet" href="<?= base_url('assets/sweetalert2-11.10.1/package/dist/sweetalert2.min.css'); ?>   ">
+
+
+
 
 </head>
 
@@ -39,8 +43,9 @@
 
 
     <div class="sufee-login d-flex align-content-center flex-wrap">
-        <div class="flash-data-for-delete" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
         <div class="container">
+            <div class="flash-data-for-pending" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <div class="flash-data-for-wrongpassword" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
@@ -70,11 +75,15 @@
         </div>
     </div>
 
-
+    <script type="text/javascript" src="<?= base_url('assets/asset-home/carint-1.0.0/js/jquery-3.4.1.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/jquery/dist/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/popper.js/dist/umd/popper.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/bootstrap/dist/js/bootstrap.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/assets/js/main.js'); ?>"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<?= base_url('assets/sweetalert2-11.10.1/package/dist/sweetalert2.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('assets/tambahan.js') ?>"></script>
 
 
 </body>

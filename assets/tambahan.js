@@ -88,7 +88,19 @@ $(document).ready(function () {
 
     const alertPendingStatusPendaftar = $(".flash-data-for-pending").data("flashdata");
     if (alertPendingStatusPendaftar) {
-        Swal.fire("Gagal". "Akun Anda belum " + alertPendingStatusPendaftar, "error");
+        Swal.fire("Login Gagal", "Akun Anda belum " + alertPendingStatusPendaftar, "error");
+    }
+
+    const alertWrongPasswordUser = $(".flash-data-for-wrongpassword").data("flashdata");
+    if (alertWrongPasswordUser) {
+        Swal.fire({
+            position: "top-center",
+            icon: "error",
+            title: "Username/password salah",
+            showConfirmButton: false,
+            timer: 2500
+        }
+        );
     }
 
 
