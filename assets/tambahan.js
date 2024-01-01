@@ -86,6 +86,13 @@ $(document).ready(function () {
 
 
 
+    const alertPendingStatusPendaftar = $(".flash-data-for-pending").data("flashdata");
+    if (alertPendingStatusPendaftar) {
+        Swal.fire("Gagal". "Akun Anda belum " + alertPendingStatusPendaftar, "error");
+    }
+
+
+
 });
 
 

@@ -72,6 +72,20 @@
         $this->db->where('id_shadow', $id_shadow);
         $queryConfirmPendaftar = $this->db->get('pendaftar');
         if ($queryConfirmPendaftar->num_rows() > 0) {
+
+            foreach ($queryConfirmPendaftar->result_array() as $row) {
+                $moveData = array(
+                    'nama' => $row['nama'],
+                    'no_ktp' => $row['no_ktp'],
+                    'alamat' => $row['alamat'],
+                    'jenis_kelamin' => $row['jenis_kelamin'],
+                    'no_hp' => $row['no_hp'],
+                    'password' => $row['password'],
+                    'status' => 'Aktif'
+                );
+            }
+            $this->db->insert('user', $moveData);
+
             $this->db->set('status', 'Aktif');
             $this->db->where('id_shadow', $id_shadow);
             $this->db->update('pendaftar');

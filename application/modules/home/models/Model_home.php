@@ -4,7 +4,7 @@
     {
         parent::__construct();
     }
-    function registrasi($nama, $no_ktp, $id_shadow, $no_hp, $alamat, $password)
+    function registrasi($id_shadow, $nama, $no_ktp, $no_hp, $jenis_kelamin, $alamat, $password)
     {
         $data =  array(
 
@@ -13,6 +13,7 @@
             'no_ktp' => $no_ktp,
             'no_hp' => $no_hp,
             'alamat' => $alamat,
+            'jenis_kelamin' => $jenis_kelamin,
             'password' => $password,
             'status' => 'Pending'
         );

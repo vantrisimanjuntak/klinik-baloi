@@ -13,8 +13,18 @@
     function checklogin()
     {
         $no_hp = $this->input->post('no_hp');
-        $password = $this->input->post('password');
+        $password = md5($this->input->post('password'));
 
         $queryCheckLogin = $this->Main_model->checkLogin($no_hp, $password);
+        if ($queryCheckLogin->num_rows() > 0) {
+            foreach ($queryCheckLogin->result_array() as $row) {
+                if ($row['status'] = 'Aktif') {
+                } else {
+                    $this->session->set_flashdata('flash', 'divalidasi');
+                }
+            }
+        } else {
+            echo "Login Gagal";
+        }
     }
 }

@@ -39,6 +39,7 @@
 
 
     <div class="sufee-login d-flex align-content-center flex-wrap">
+        <div class="flash-data-for-delete" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">

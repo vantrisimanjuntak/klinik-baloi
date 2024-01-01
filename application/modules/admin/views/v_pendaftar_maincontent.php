@@ -45,6 +45,7 @@
                                                 <th>Nama</th>
                                                 <th>No. KTP</th>
                                                 <th>No. HP</th>
+                                                <th>Jenis Kelamin</th>
                                                 <th>Alamat</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
@@ -62,6 +63,7 @@
                                                     <td><?= $data['nama']; ?></td>
                                                     <td><?= $data['no_ktp']; ?></td>
                                                     <td><?= $data['no_hp']; ?></td>
+                                                    <td><?= $data['jenis_kelamin']; ?></td>
                                                     <td><?= $data['alamat']; ?></td>
                                                     <td><?= $data['status']; ?></td>
                                                     <td>

@@ -86,6 +86,15 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                    <div class="col-sm-2">
+                        <select name="jenis_kelamin" type="text" id="" class="custom-select">
+                            <option value="Pria">Pria</option>
+                            <option value="Wanita">Wanita</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" id="" required cols="20" name="alamat" rows="10"></textarea>

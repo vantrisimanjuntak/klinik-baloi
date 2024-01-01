@@ -18,10 +18,11 @@
         $nama = $this->input->post('nama');
         $no_ktp = $this->input->post('no_ktp');
         $no_hp = $this->input->post('no_hp');
+        $jenis_kelamin = $this->input->post('jenis_kelamin');
         $alamat = $this->input->post('alamat');
         $password = md5($this->input->post('password'));
         // echo $nama, " " . $id_shadow, " " . $no_ktp, " " . $alamat .  " " . $no_hp, " " . $password;
-        $queryRegistrasi = $this->Model_home->registrasi($nama, $no_ktp, $id_shadow, $no_hp, $alamat, $password);
+        $queryRegistrasi = $this->Model_home->registrasi($id_shadow, $nama, $no_ktp, $no_hp, $jenis_kelamin,  $alamat, $password);
         if ($queryRegistrasi) {
             $this->session->set_flashdata('flash', 'berhasil');
             redirect('registrasi');
