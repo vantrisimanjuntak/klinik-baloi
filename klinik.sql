@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2024 at 04:53 AM
+-- Generation Time: Jan 02, 2024 at 08:59 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -49,11 +49,23 @@ INSERT INTO `admin` (`id`, `nama`, `username`, `password`) VALUES
 
 CREATE TABLE `daftar_pemeriksaan` (
   `antrian` int(10) NOT NULL,
-  `pasien` int(50) NOT NULL,
+  `pasien` bigint(50) NOT NULL,
   `jenis_kelamin` varchar(50) NOT NULL,
-  `tgl_daftar_pemeriksaan` date NOT NULL,
-  `layanan` varchar(100) NOT NULL
+  `tgl_kontrol` date NOT NULL,
+  `layanan` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `daftar_pemeriksaan`
+--
+
+INSERT INTO `daftar_pemeriksaan` (`antrian`, `pasien`, `jenis_kelamin`, `tgl_kontrol`, `layanan`) VALUES
+(4, 1209202410980002, 'Pria', '2024-01-05', 1),
+(5, 1209202410980002, 'Pria', '2024-01-11', 1),
+(6, 1209202410980002, 'Pria', '2024-02-01', 2),
+(7, 1209202410980002, 'Pria', '0000-00-00', 1),
+(8, 1209202410980002, 'Pria', '0000-00-00', 1),
+(9, 1209202410980002, 'Pria', '0000-00-00', 1);
 
 -- --------------------------------------------------------
 
@@ -83,7 +95,7 @@ INSERT INTO `dokter` (`id`, `nama`, `tgl_pelayanan`, `jam_pelayanan`, `jabatan`)
 --
 
 CREATE TABLE `layanan` (
-  `id_layanan` int(11) NOT NULL,
+  `id_layanan` int(2) NOT NULL,
   `title_layanan` varchar(100) NOT NULL,
   `desc_layanan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -105,8 +117,8 @@ INSERT INTO `layanan` (`id_layanan`, `title_layanan`, `desc_layanan`) VALUES
 CREATE TABLE `pendaftar` (
   `id` int(11) NOT NULL,
   `id_shadow` varchar(100) NOT NULL,
+  `no_ktp` bigint(50) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  `no_ktp` varchar(30) NOT NULL,
   `no_hp` text NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `alamat` text NOT NULL,
@@ -118,9 +130,22 @@ CREATE TABLE `pendaftar` (
 -- Dumping data for table `pendaftar`
 --
 
-INSERT INTO `pendaftar` (`id`, `id_shadow`, `nama`, `no_ktp`, `no_hp`, `jenis_kelamin`, `alamat`, `password`, `status`) VALUES
-(22, '58268b09e1d296f4', 'Vantri A Simanjuntak', '1209202410980002', '085358904344', 'Pria', 'Kisaran', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Aktif'),
-(23, '76a8685e188b00ca', 'Findy Christy', '120901012123123', '085312390123', 'Wanita', 'Kisaran', '4297f44b13955235245b2497399d7a93', 'Pending');
+INSERT INTO `pendaftar` (`id`, `id_shadow`, `no_ktp`, `nama`, `no_hp`, `jenis_kelamin`, `alamat`, `password`, `status`) VALUES
+(36, 'ec1d66bd18b2f0f1', 1209202410980002, 'Vantri A Simanjuntak', '085358904344', 'Pria', 'Kisaran', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Aktif'),
+(37, 'bb1da22ad5f02425', 1209202410980003, 'Findy Christy', '085358904343', 'Pria', 'Nias', '4297f44b13955235245b2497399d7a93', 'Pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rekam_medis`
+--
+
+CREATE TABLE `rekam_medis` (
+  `no_rekammedis` int(10) NOT NULL,
+  `antrian_pemeriksaan` int(10) NOT NULL,
+  `dokter_pemeriksa` int(4) NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -129,7 +154,7 @@ INSERT INTO `pendaftar` (`id`, `id_shadow`, `nama`, `no_ktp`, `no_hp`, `jenis_ke
 --
 
 CREATE TABLE `user` (
-  `no_ktp` varchar(20) NOT NULL,
+  `no_ktp` bigint(50) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `alamat` text NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
@@ -143,7 +168,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`no_ktp`, `nama`, `alamat`, `jenis_kelamin`, `status`, `no_hp`, `password`) VALUES
-('1209202410980002', 'Vantri A Simanjuntak', 'Kisaran', 'Pria', 'Aktif', '085358904344', 'f6fdffe48c908deb0f4c3bd36c032e72');
+(1209202410980002, 'Vantri A Simanjuntak', 'Kisaran', 'Pria', 'Aktif', '085358904344', 'f6fdffe48c908deb0f4c3bd36c032e72'),
+(1209202410980003, 'Findy Christy', 'Nias', 'Pria', 'Aktif', '085358904343', '4297f44b13955235245b2497399d7a93');
 
 --
 -- Indexes for dumped tables
@@ -159,7 +185,9 @@ ALTER TABLE `admin`
 -- Indexes for table `daftar_pemeriksaan`
 --
 ALTER TABLE `daftar_pemeriksaan`
-  ADD PRIMARY KEY (`antrian`);
+  ADD PRIMARY KEY (`antrian`),
+  ADD KEY `layanan` (`layanan`),
+  ADD KEY `id_pasien` (`pasien`) USING BTREE;
 
 --
 -- Indexes for table `dokter`
@@ -180,6 +208,14 @@ ALTER TABLE `pendaftar`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `rekam_medis`
+--
+ALTER TABLE `rekam_medis`
+  ADD PRIMARY KEY (`no_rekammedis`),
+  ADD KEY `pasien` (`antrian_pemeriksaan`),
+  ADD KEY `dokter_pemeriksa` (`dokter_pemeriksa`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -193,7 +229,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `daftar_pemeriksaan`
 --
 ALTER TABLE `daftar_pemeriksaan`
-  MODIFY `antrian` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `antrian` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `dokter`
@@ -205,13 +241,37 @@ ALTER TABLE `dokter`
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
-  MODIFY `id_layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_layanan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pendaftar`
 --
 ALTER TABLE `pendaftar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `rekam_medis`
+--
+ALTER TABLE `rekam_medis`
+  MODIFY `no_rekammedis` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `daftar_pemeriksaan`
+--
+ALTER TABLE `daftar_pemeriksaan`
+  ADD CONSTRAINT `daftar_pemeriksaan_ibfk_1` FOREIGN KEY (`layanan`) REFERENCES `layanan` (`id_layanan`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `daftar_pemeriksaan_ibfk_2` FOREIGN KEY (`pasien`) REFERENCES `user` (`no_ktp`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `rekam_medis`
+--
+ALTER TABLE `rekam_medis`
+  ADD CONSTRAINT `rekam_medis_ibfk_1` FOREIGN KEY (`antrian_pemeriksaan`) REFERENCES `daftar_pemeriksaan` (`antrian`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `rekam_medis_ibfk_2` FOREIGN KEY (`dokter_pemeriksa`) REFERENCES `dokter` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
