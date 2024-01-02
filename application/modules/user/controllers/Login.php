@@ -22,6 +22,8 @@
 
                     $sess = array(
                         'nama' => $row['nama'],
+                        'no_ktp' => $row['no_ktp'],
+                        'jenis_kelamin' => $row['jenis_kelamin']
 
                     );
                     $this->session->set_userdata($sess);

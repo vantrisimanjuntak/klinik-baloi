@@ -24,4 +24,9 @@
             return FALSE;
         }
     }
+    function allLayanan()
+    {
+        $queryGetAllLayanan = $this->db->get('layanan');
+        return $queryGetAllLayanan;
+    }
 }

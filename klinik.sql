@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 01, 2024 at 07:04 PM
+-- Generation Time: Jan 02, 2024 at 04:53 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -44,6 +44,20 @@ INSERT INTO `admin` (`id`, `nama`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `daftar_pemeriksaan`
+--
+
+CREATE TABLE `daftar_pemeriksaan` (
+  `antrian` int(10) NOT NULL,
+  `pasien` int(50) NOT NULL,
+  `jenis_kelamin` varchar(50) NOT NULL,
+  `tgl_daftar_pemeriksaan` date NOT NULL,
+  `layanan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dokter`
 --
 
@@ -65,12 +79,22 @@ INSERT INTO `dokter` (`id`, `nama`, `tgl_pelayanan`, `jam_pelayanan`, `jabatan`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pasien`
+-- Table structure for table `layanan`
 --
 
-CREATE TABLE `pasien` (
-  `no_mr` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `layanan` (
+  `id_layanan` int(11) NOT NULL,
+  `title_layanan` varchar(100) NOT NULL,
+  `desc_layanan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `layanan`
+--
+
+INSERT INTO `layanan` (`id_layanan`, `title_layanan`, `desc_layanan`) VALUES
+(1, 'Layanan Poli Umum', 'Merupakan salah satu layanan yang ada di Klinik Baloi Batam yang memberikan pelayanan kedokteran berupa pemeriksaan kesehatan, pengobatan dan penyuluhan kepada pasien atau masyarakat agar tidak terjadi penularan dan komplikasi penyakit, serta meningkatkan pengetahuan dan kesadaran masyarakat dalam bidang kesehatan. Pelayanan kesehatan dilakukan oleh dokter dan perawat yang memiliki sertifikat dan kompetensi yang dibutuhkan untuk pelayanan kesehatan primer.'),
+(2, 'Layanan Poli Gigi dan Kesehatan Mulut', 'Layanan poli gigi dan kesegatan mulut merupakan salah satu dari jenis layanan di puskesmas yang memberikan pelayanan kesehatan gigi dan mulut berupa pemeriksaan kesehatan gigi dan mulut, pengobatan dan pemberian tindakan medis dasar kesehatan gigi dan mulut.');
 
 -- --------------------------------------------------------
 
@@ -132,16 +156,22 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `daftar_pemeriksaan`
+--
+ALTER TABLE `daftar_pemeriksaan`
+  ADD PRIMARY KEY (`antrian`);
+
+--
 -- Indexes for table `dokter`
 --
 ALTER TABLE `dokter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pasien`
+-- Indexes for table `layanan`
 --
-ALTER TABLE `pasien`
-  ADD PRIMARY KEY (`no_mr`);
+ALTER TABLE `layanan`
+  ADD PRIMARY KEY (`id_layanan`);
 
 --
 -- Indexes for table `pendaftar`
@@ -160,10 +190,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `daftar_pemeriksaan`
+--
+ALTER TABLE `daftar_pemeriksaan`
+  MODIFY `antrian` int(10) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `layanan`
+--
+ALTER TABLE `layanan`
+  MODIFY `id_layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pendaftar`
