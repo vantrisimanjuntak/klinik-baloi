@@ -32,9 +32,8 @@
                                                 <th>No.</th>
                                                 <th>Nama</th>
                                                 <th>Tanggal Kontrol</th>
-                                                <th>Layanan </th>
-
-
+                                                <th>Layanan</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -47,6 +46,76 @@
                                                     <td><?= $data['nama']; ?></td>
                                                     <td><?= date('d M Y', strtotime($data['tgl_kontrol']));  ?></td>
                                                     <td><?= $data['title_layanan']; ?></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target=".bs-example-modal-lg-<?= $id; ?>">Pemeriksaan</button>
+                                                        <div class="modal fade bs-example-modal-lg-<?= $id; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                                            <div class="modal-dialog modal-lg">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title" id="myModalLabel">No. Antrian: <?= $id; ?></h4>
+                                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <h4></h4>
+                                                                        <form action="">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 col-sm-12 ">
+                                                                                    <h2>Input Data Rekam Medis</h2>
+                                                                                    <div class="x_content">
+                                                                                        <br />
+                                                                                        <form action="<?= base_url('admin/dokter/addDokter'); ?>" method="POST">
+                                                                                            <div class="form-group row">
+                                                                                                <label for="staticEmail" class="col-sm-2 col-md-2 col-lg-2 col-form-label">No. Antrian</label>
+                                                                                                <div class="col-sm-3">
+                                                                                                    <select class="form-control">
+                                                                                                        <?php foreach ($allDaftarPemeriksaan as $row) : ?>
+                                                                                                            <option><?= $row['antrian']; ?></option>
+                                                                                                        <?php endforeach;  ?>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group row">
+                                                                                                <label for="inputPassword" class="col-sm-2 col-form-label">Hari Pelayanan</label>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <input type="date" class="form-control" name="tanggal_pelayanan" id="">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group row">
+                                                                                                <label for="inputPassword" class="col-sm-2 col-form-label">Jam Pelayanan</label>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <div class='input-group date' id='myDatepicker3'>
+                                                                                                        <input type='text' name="jam_pelayanan" class="form-control" />
+                                                                                                        <span class="input-group-addon">
+                                                                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group row">
+                                                                                                <label for="inputPassword" class="col-sm-2 col-form-label">Jabatan</label>
+                                                                                                <div class="col-sm-10">
+                                                                                                    <input type="text" name="jabatan" class="form-control" id="">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </form>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
