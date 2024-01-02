@@ -16,7 +16,7 @@
 
         $id_shadow = bin2hex(random_bytes('8'));
         $nama = $this->input->post('nama');
-        $no_ktp = $this->input->post('no_ktp');
+        $no_ktp =   $this->input->post('no_ktp');
         $no_hp = $this->input->post('no_hp');
         $jenis_kelamin = $this->input->post('jenis_kelamin');
         $alamat = $this->input->post('alamat');

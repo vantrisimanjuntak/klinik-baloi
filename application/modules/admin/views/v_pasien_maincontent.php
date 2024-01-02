@@ -29,27 +29,24 @@
                                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>ID</th>
+                                                <th>No.</th>
                                                 <th>Nama</th>
-                                                <th>Tanggal Pelayanan</th>
-                                                <th>Jam Pelayanan</th>
-                                                <th>Jabatan</th>
+                                                <th>Tanggal Kontrol</th>
+                                                <th>Layanan </th>
+
 
                                             </tr>
                                         </thead>
-
                                         <tbody>
                                             <?php
                                             $id = 1;
 
-                                            foreach ($allDokter as $data) :  ?>
+                                            foreach ($allPasien as $data) :  ?>
                                                 <tr>
                                                     <td><?= $id++; ?> </td>
                                                     <td><?= $data['nama']; ?></td>
-                                                    <td><?= date('d M Y', strtotime($data['tgl_pelayanan']));  ?></td>
-                                                    <td><?= $data['jam_pelayanan']; ?></td>
-                                                    <td><?= $data['jabatan']; ?></td>
-
+                                                    <td><?= date('d M Y', strtotime($data['tgl_kontrol']));  ?></td>
+                                                    <td><?= $data['title_layanan']; ?></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>

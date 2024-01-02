@@ -1,10 +1,11 @@
+<div class="flash-data-for-registration-user" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
             <strong>Basic Form</strong> Elements
         </div>
         <div class="card-body card-block">
-            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?= base_url('user/registrasi_pemeriksaan/submit') ?>" id="submitRegistrasiPemeriksaan" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="row form-group">
                     <div class="col col-md-3"><label class=" form-control-label">No. RM</label></div>
                     <div class="col-12 col-md-9">
@@ -28,7 +29,7 @@
                     <div class="col col-md-9">
                         <div class="form-group">
                             <div class="input-group">
-                                <input class="form-control" type="date">
+                                <input class="form-control" name="tanggal_kontrol" type="date">
                             </div>
                         </div>
                     </div>
@@ -36,9 +37,9 @@
                 <div class="row form-group">
                     <div class="col col-md-3"><label for="select" class=" form-control-label">Layanan</label></div>
                     <div class="col-12 col-md-9">
-                        <select name="select" id="select" class="form-control">
+                        <select name="layanan" id="select" class="form-control">
                             <?php foreach ($allLayanan->result_array() as $row) :  ?>
-                                <option value="1"><?= $row['title_layanan']; ?></option>
+                                <option value="<?= $row['id_layanan']; ?>"><?= $row['title_layanan']; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -46,12 +47,13 @@
             </form>
         </div>
         <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
+            <button type="submit" class="btn btn-primary btn-sm btn-submit-reg-pemeriksaan">
                 <i class="fa fa-dot-circle-o"></i> Submit
             </button>
             <button type="reset" class="btn btn-danger btn-sm">
                 <i class="fa fa-ban"></i> Reset
             </button>
         </div>
+
     </div>
 </div>

@@ -6,7 +6,12 @@
     }
     function index()
     {
-        $data['title'] = 'Dashboard - Klinik Baloi';
-        $this->load->view('v_dashboard', $data);
+        if ($this->session->userdata('nama')) {
+            # code...
+            $data['title'] = 'Dashboard';
+            $this->load->view('v_dashboard', $data);
+        } else {
+            redirect('user/login');
+        }
     }
 }

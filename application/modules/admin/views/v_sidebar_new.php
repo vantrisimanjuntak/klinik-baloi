@@ -31,6 +31,7 @@
                       <li><a href="<?= base_url('admin/dokter'); ?>"><i class="fa fa-user"></i> Dokter</a> </li>
                       <li><a href="<?= base_url('admin/pasien'); ?>"><i class="fa fa-home"></i> Pasien</a></li>
                       <li><a href="<?= base_url('admin/pendaftar'); ?>"><i class="fa fa-home"></i> Pendaftar</a></li>
+                      <li><a href="<?= base_url('admin/rekammedis'); ?>"><i class="fa fa-home"></i> Rekam Medis</a></li>
                   </ul>
               </div>
 

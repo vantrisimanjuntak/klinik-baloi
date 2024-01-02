@@ -36,7 +36,6 @@
         } else {
             $this->session->set_flashdata('flash', 'salah');
             redirect('user/login');
-            echo "Login Gagal";
         }
     }
 }

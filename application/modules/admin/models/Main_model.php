@@ -94,4 +94,28 @@
             return FALSE;
         }
     }
+    function getAllRekamMedis()
+    {
+        $query = $this->db->get('rekam_medis');
+        return $query->result_array();
+    }
+
+
+    // Model for Pasien
+
+    function getAllPasien()
+    {
+        $this->db->select('b.nama, a.tgl_kontrol, c.title_layanan');
+        $this->db->from('daftar_pemeriksaan a');
+        $this->db->join('user b', 'a.pasien = b.no_ktp');
+        $this->db->join('layanan c', 'a.layanan = c.id_layanan');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function getAllDaftarPemeriksaan()
+    {
+        $query = $this->db->get('daftar_pemeriksaan');
+        return $query->result_array();
+    }
 }

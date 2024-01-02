@@ -31,6 +31,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="<?= base_url('assets/sweetalert2-11.10.1/package/dist/sweetalert2.min.css'); ?>   ">
+
 </head>
 
 <body>
@@ -60,13 +62,11 @@
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
-
+    <script type="text/javascript" src="<?= base_url('assets/asset-home/carint-1.0.0/js/jquery-3.4.1.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/jquery/dist/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/popper.js/dist/umd/popper.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/bootstrap/dist/js/bootstrap.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/assets/js/main.js'); ?>"></script>
-
-
     <script src="<?= base_url('assets/assets-user/vendors/chart.js/dist/Chart.bundle.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/assets/js/dashboard.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/assets/js/widgets.js'); ?>"></script>
@@ -103,6 +103,12 @@
     <script src="<?= base_url('assets/assets-user/vendors/datatables.net-buttons/js/buttons.print.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/vendors/datatables.net-buttons/js/buttons.colVis.min.js'); ?>"></script>
     <script src="<?= base_url('assets/assets-user/assets/js/init-scripts/data-table/datatables-init.js'); ?>"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<?= base_url('assets/sweetalert2-11.10.1/package/dist/sweetalert2.min.js'); ?>"></script>
+
+    <script src="<?= base_url('assets/tambahan.js') ?>" type="text/javascript"></script>
 
 </body>
 

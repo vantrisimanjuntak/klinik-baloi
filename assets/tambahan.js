@@ -104,6 +104,34 @@ $(document).ready(function () {
     }
 
 
+    $(".btn-submit-reg-pemeriksaan").click(function () {
+
+        var base_url = window.location.origin + '/projectdika/user/registrasi_pemeriksaan/submit/';
+        var id = $(this).attr('id');
+
+        Swal.fire({
+            title: "Apakah anda yakin?",
+            text: "Pastikan data sudah benar",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Hapus",
+            cancelButtonText: "Batal",
+        }).then((result) => {
+            if (result.value) {
+                $("#submitRegistrasiPemeriksaan").submit();
+            }
+        });
+    });
+
+    const alertSuccessRegistrationUser = $(".flash-data-for-registration-user").data("flashdata");
+    if (alertSuccessRegistrationUser) {
+        Swal.fire("Berhasil", " Data sudah " + alertSuccessRegistrationUser, "success");
+    }
+
+
+
 
 });
 
