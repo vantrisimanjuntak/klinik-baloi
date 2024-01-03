@@ -44,8 +44,13 @@
 
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
-            <div class="flash-data-for-pending" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-            <div class="flash-data-for-wrongpassword" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php if ($this->session->flashdata('flash')) : ?>
+                <div class="flash-data-for-wrongpassword" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php endif; ?>
+            <?php if ($this->session->flashdata('belum_verifikasi')) :  ?>
+
+                <div class="flash-data-for-pending" data-flashdata="<?= $this->session->flashdata('belum_verifikasi'); ?>"></div>
+            <?php endif; ?>
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">

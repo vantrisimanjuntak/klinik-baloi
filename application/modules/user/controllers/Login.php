@@ -18,18 +18,16 @@
         $queryCheckLogin = $this->Main_model->checkLogin($no_hp, $password);
         if ($queryCheckLogin->num_rows() > 0) {
             foreach ($queryCheckLogin->result_array() as $row) {
-                if ($row['status'] == 'Aktif') {
-
+                if ($row['status'] === 'Aktif') {
                     $sess = array(
                         'nama' => $row['nama'],
                         'no_ktp' => $row['no_ktp'],
                         'jenis_kelamin' => $row['jenis_kelamin']
-
                     );
                     $this->session->set_userdata($sess);
                     redirect('user/dashboard');
                 } else {
-                    $this->session->set_flashdata('flash', 'diverifikasi');
+                    $this->session->set_flashdata('belum_verifikasi', 'diverifikasi');
                     redirect('user/login');
                 }
             }

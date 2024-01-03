@@ -52,5 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'home/Dashboard';
 $route['registrasi'] = 'home/Registrasi';
 $route['registrasi/submit'] = 'home/Registrasi/submit';
+$route['admin'] = 'admin/Dashboard';
+$route['user'] = 'user/Dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -21,9 +21,6 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box table-responsive">
-                                    <p class="text-muted font-13 m-b-30">
-                                        The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-                                    </p>
                                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                                         <thead>
                                             <tr>
@@ -33,11 +30,12 @@
                                                 <th>Nama Pasien</th>
                                                 <th>No. KTP</th>
                                                 <th>No. HP</th>
-                                                <th>No. Umur</th>
+                                                <th>Umur</th>
                                                 <th>Jenis Kelamin</th>
                                                 <th>Layanan </th>
                                                 <th>Dokter Pemeriksa </th>
                                                 <th>Tanggal Kontrol </th>
+                                                <th>Action </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -57,6 +55,11 @@
                                                     <td><?= $data['title_layanan']; ?></td>
                                                     <td><?= $data['nama']; ?></td>
                                                     <td><?= date('d M Y', strtotime($data['tgl_kontrol']));  ?></td>
+                                                    <td>
+                                                        <a href="<?= base_url('admin/rekammedis/generate/' . $data['no_rekammedis']); ?>">
+                                                            <button type="button" class="btn btn-primary">Download</button>
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
