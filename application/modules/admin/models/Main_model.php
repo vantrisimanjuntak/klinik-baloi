@@ -96,7 +96,16 @@
     }
     function getAllRekamMedis()
     {
-        $query = $this->db->get('rekam_medis');
+
+        $this->db->select('a.no_rekammedis, g.nama AS nama_pasien, a.antrian_pemeriksaan, a.no_kwitansi, c.nama, a.catatan');
+        $this->db->from('rekam_medis a');
+        $this->db->join('daftar_pemeriksaan b', 'a.antrian_pemeriksaan = b.antrian');
+        // $this->db->join('daftar_pemeriksaan h', 'b.antrian_pemeriksaan = h.antrian');
+        $this->db->join('daftar_pemeriksaan f', 'b.antrian_pemeriksaan = b.antrian');
+        $this->db->join('user g', 'f.pasien = g.no_ktp');
+        $this->db->join('dokter c', 'a.dokter_pemeriksa = c.id');
+
+        $query = $this->db->get();
         return $query->result_array();
     }
 
@@ -105,7 +114,7 @@
 
     function getAllPasien()
     {
-        $this->db->select('b.nama, a.tgl_kontrol, c.title_layanan');
+        $this->db->select('a.antrian, b.nama, a.tgl_kontrol, c.title_layanan');
         $this->db->from('daftar_pemeriksaan a');
         $this->db->join('user b', 'a.pasien = b.no_ktp');
         $this->db->join('layanan c', 'a.layanan = c.id_layanan');
@@ -117,5 +126,19 @@
     {
         $query = $this->db->get('daftar_pemeriksaan');
         return $query->result_array();
+    }
+
+    function addRekamMedis($no_rekammedis, $no_antrian, $dokter_pemeriksa, $catatan)
+    {
+        $data = array(
+            'no_rekammedis' => $no_rekammedis,
+            'antrian_pemeriksaan' => $no_antrian,
+            'dokter_pemeriksa' => $dokter_pemeriksa,
+            'catatan' => $catatan
+        );
+        if ($data) {
+            $this->db->insert('rekam_medis', $data);
+            return TRUE;
+        }
     }
 }
