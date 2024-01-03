@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2024 at 08:59 PM
+-- Generation Time: Jan 03, 2024 at 05:13 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -144,8 +144,17 @@ CREATE TABLE `rekam_medis` (
   `no_rekammedis` int(10) NOT NULL,
   `antrian_pemeriksaan` int(10) NOT NULL,
   `dokter_pemeriksa` int(4) NOT NULL,
+  `no_kwitansi` int(10) NOT NULL,
   `catatan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rekam_medis`
+--
+
+INSERT INTO `rekam_medis` (`no_rekammedis`, `antrian_pemeriksaan`, `dokter_pemeriksa`, `no_kwitansi`, `catatan`) VALUES
+(7, 5, 1, 0, 'asdadsad'),
+(418, 5, 1, 0, 'asdadsad');
 
 -- --------------------------------------------------------
 
@@ -253,7 +262,7 @@ ALTER TABLE `pendaftar`
 -- AUTO_INCREMENT for table `rekam_medis`
 --
 ALTER TABLE `rekam_medis`
-  MODIFY `no_rekammedis` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `no_rekammedis` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=419;
 
 --
 -- Constraints for dumped tables
