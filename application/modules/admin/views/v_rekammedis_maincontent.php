@@ -49,11 +49,11 @@
                                                     <td><?= $id++; ?> </td>
                                                     <td><?= $data['no_rekammedis']; ?></td>
                                                     <td><?= $data['no_kwitansi']; ?></td>
-                                                    <td><?= $data['title_layanan']; ?></td>
-                                                    <td><?= $data['title_layanan']; ?></td>
-                                                    <td><?= $data['title_layanan']; ?></td>
-                                                    <td><?= $data['title_layanan']; ?></td>
-                                                    <td><?= $data['title_layanan']; ?></td>
+                                                    <td><?= $data['nama_pasien']; ?></td>
+                                                    <td><?= $data['no_ktp']; ?></td>
+                                                    <td><?= $data['no_hp']; ?></td>
+                                                    <td></td>
+                                                    <td><?= $data['jenis_kelamin']; ?></td>
                                                     <td><?= $data['title_layanan']; ?></td>
                                                     <td><?= $data['nama']; ?></td>
                                                     <td><?= date('d M Y', strtotime($data['tgl_kontrol']));  ?></td>

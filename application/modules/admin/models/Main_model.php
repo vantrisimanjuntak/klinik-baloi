@@ -97,12 +97,14 @@
     function getAllRekamMedis()
     {
 
-        $this->db->select('a.no_rekammedis, g.nama AS nama_pasien, a.antrian_pemeriksaan, a.no_kwitansi, c.nama, a.catatan');
+        $this->db->select('a.no_rekammedis, n.nama AS nama_pasien, n.no_ktp AS no_ktp, n.no_hp, n.jenis_kelamin, q.title_layanan, b.tgl_kontrol, a.antrian_pemeriksaan, a.no_kwitansi, c.nama, a.catatan');
         $this->db->from('rekam_medis a');
+        $this->db->from('user n');
+        $this->db->from('layanan q');
         $this->db->join('daftar_pemeriksaan b', 'a.antrian_pemeriksaan = b.antrian');
-        // $this->db->join('daftar_pemeriksaan h', 'b.antrian_pemeriksaan = h.antrian');
-        $this->db->join('daftar_pemeriksaan f', 'b.antrian_pemeriksaan = b.antrian');
-        $this->db->join('user g', 'f.pasien = g.no_ktp');
+        $this->db->join('daftar_pemeriksaan m', 'n.no_ktp = m.pasien');
+        $this->db->join('daftar_pemeriksaan k', 'q.id_layanan = k.layanan');
+
         $this->db->join('dokter c', 'a.dokter_pemeriksa = c.id');
 
         $query = $this->db->get();
