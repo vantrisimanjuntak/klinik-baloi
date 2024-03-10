@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2024 at 05:13 AM
+-- Generation Time: Jan 03, 2024 at 07:56 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -60,12 +60,7 @@ CREATE TABLE `daftar_pemeriksaan` (
 --
 
 INSERT INTO `daftar_pemeriksaan` (`antrian`, `pasien`, `jenis_kelamin`, `tgl_kontrol`, `layanan`) VALUES
-(4, 1209202410980002, 'Pria', '2024-01-05', 1),
-(5, 1209202410980002, 'Pria', '2024-01-11', 1),
-(6, 1209202410980002, 'Pria', '2024-02-01', 2),
-(7, 1209202410980002, 'Pria', '0000-00-00', 1),
-(8, 1209202410980002, 'Pria', '0000-00-00', 1),
-(9, 1209202410980002, 'Pria', '0000-00-00', 1);
+(10, 1209202410980003, 'Wanita', '2024-01-11', 2);
 
 -- --------------------------------------------------------
 
@@ -86,7 +81,8 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`id`, `nama`, `tgl_pelayanan`, `jam_pelayanan`, `jabatan`) VALUES
-(1, 'Vantri', '2023-12-26', '10:00:00', 'Dokter Kepala');
+(1, 'dr. Edgina', '2023-12-26', '10:00:00', 'Dokter Kepala'),
+(2, 'dr. Lamhot Siagian. Sp.THT', '2024-01-04', '09:00:00', 'Dokter Kepala');
 
 -- --------------------------------------------------------
 
@@ -131,8 +127,8 @@ CREATE TABLE `pendaftar` (
 --
 
 INSERT INTO `pendaftar` (`id`, `id_shadow`, `no_ktp`, `nama`, `no_hp`, `jenis_kelamin`, `alamat`, `password`, `status`) VALUES
-(36, 'ec1d66bd18b2f0f1', 1209202410980002, 'Vantri A Simanjuntak', '085358904344', 'Pria', 'Kisaran', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Aktif'),
-(37, 'bb1da22ad5f02425', 1209202410980003, 'Findy Christy', '085358904343', 'Pria', 'Nias', '4297f44b13955235245b2497399d7a93', 'Pending');
+(3, '738b1940914800ca', 1209202410980002, 'Vantri A Simanjuntak', '085358904344', 'Pria', 'Kisaran', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Aktif'),
+(4, '15a170696c57a6e7', 1209202410980003, 'Findy Christy', '085358904343', 'Wanita', 'Bandung', '4297f44b13955235245b2497399d7a93', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -141,7 +137,7 @@ INSERT INTO `pendaftar` (`id`, `id_shadow`, `no_ktp`, `nama`, `no_hp`, `jenis_ke
 --
 
 CREATE TABLE `rekam_medis` (
-  `no_rekammedis` int(10) NOT NULL,
+  `no_rekammedis` int(11) NOT NULL,
   `antrian_pemeriksaan` int(10) NOT NULL,
   `dokter_pemeriksa` int(4) NOT NULL,
   `no_kwitansi` int(10) NOT NULL,
@@ -153,8 +149,7 @@ CREATE TABLE `rekam_medis` (
 --
 
 INSERT INTO `rekam_medis` (`no_rekammedis`, `antrian_pemeriksaan`, `dokter_pemeriksa`, `no_kwitansi`, `catatan`) VALUES
-(7, 5, 1, 0, 'asdadsad'),
-(418, 5, 1, 0, 'asdadsad');
+(39, 10, 2, 0, 'Sakit lambung. Resep obat');
 
 -- --------------------------------------------------------
 
@@ -167,18 +162,18 @@ CREATE TABLE `user` (
   `nama` varchar(100) NOT NULL,
   `alamat` text NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
-  `status` varchar(20) NOT NULL,
   `no_hp` varchar(20) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`no_ktp`, `nama`, `alamat`, `jenis_kelamin`, `status`, `no_hp`, `password`) VALUES
-(1209202410980002, 'Vantri A Simanjuntak', 'Kisaran', 'Pria', 'Aktif', '085358904344', 'f6fdffe48c908deb0f4c3bd36c032e72'),
-(1209202410980003, 'Findy Christy', 'Nias', 'Pria', 'Aktif', '085358904343', '4297f44b13955235245b2497399d7a93');
+INSERT INTO `user` (`no_ktp`, `nama`, `alamat`, `jenis_kelamin`, `no_hp`, `password`, `status`) VALUES
+(1209202410980002, 'Vantri A Simanjuntak', 'Kisaran', 'Pria', '085358904344', 'f6fdffe48c908deb0f4c3bd36c032e72', 'Aktif'),
+(1209202410980003, 'Findy Christy', 'Bandung', 'Wanita', '085358904343', '4297f44b13955235245b2497399d7a93', 'Aktif');
 
 --
 -- Indexes for dumped tables
@@ -238,13 +233,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `daftar_pemeriksaan`
 --
 ALTER TABLE `daftar_pemeriksaan`
-  MODIFY `antrian` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `antrian` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `layanan`
@@ -256,13 +251,13 @@ ALTER TABLE `layanan`
 -- AUTO_INCREMENT for table `pendaftar`
 --
 ALTER TABLE `pendaftar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `rekam_medis`
 --
 ALTER TABLE `rekam_medis`
-  MODIFY `no_rekammedis` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=419;
+  MODIFY `no_rekammedis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- Constraints for dumped tables

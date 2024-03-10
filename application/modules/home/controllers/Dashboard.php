@@ -1,13 +1,14 @@
-<?php class Dashboard extends MX_Controller
+<?php defined('BASEPATH') or exit('No direct script access allowed');
+
+class Dashboard extends MX_Controller
 {
     function __construct()
     {
         parent::__construct();
-        $this->load->helper('url');
     }
-    public function index()
+    function index()
     {
-        $data['title'] = 'Home';
-        $this->load->view('home/v_main', $data);
+        $title = 'Home';
+        $this->load->view('home/v_main', $title);
     }
 }

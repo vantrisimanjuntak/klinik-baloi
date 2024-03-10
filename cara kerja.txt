@@ -1,0 +1,11 @@
+Cara Menggunakan:
+
+
+1. Akses ke https://klinikbaloi.project.portosaya.my.id/registrasi
+2. Isi Formulir
+3. Setelah selesai, silahkan ke link ini https://klinikbaloi.project.portosaya.my.id/admin/login menggunakan username admin dan password admin 
+4. Akifkan akun pendaftar dari menu Pendaftar
+5. Setelah itu login ke https://klinikbaloi.project.portosaya.my.id/user/login menggunakan nomor HP dan password
+6. Jika ingin request pemeriksaan pasien klik menu Pemeriksaan Pasien dan isi datanya
+7. Data yang sudah dimasukkan user akan tampil di menu Pasien di panel admin 
+8. 
